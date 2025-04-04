@@ -1,0 +1,30 @@
+# @license BSD-3 https://opensource.org/licenses/BSD-3-Clause
+# Copyright (c) 2024, Institute of Automatic Control - RWTH Aachen University
+# Maximilian Nitsch (m.nitsch@irt.rwth-aachen.de)
+# All rights reserved.
+
+gnss_simulator:
+  general_settings:
+    sample_time_pvt: 0.05 # (s)
+    sample_time_attitude: 0.05 # (s)
+    seed: 42
+    use_constant_seed: false
+
+  model_parameter_settings:
+    ned_geodetic_reference: [-70.667997328, -8.266998932, 40.0] # (deg, deg, m)
+    latlon_noise_std: 0.006 # (m)
+    hgt_noise_std: 0.01 # (m)
+    north_east_vel_noise_std: 0.03 # (m/s)
+    down_vel_noise_std: 0.03 # (m/s)
+    roll_pitch_noise_std: 0.05 # (deg)
+    yaw_noise_std: 0.03 # (deg)
+    roll_pitch_rate_noise_std: 0.05 # (deg/s)
+    yaw_rate_noise_std: 0.05 # (deg/s)
+
+    lever_arm_body_to_sensor_frame: [0.0, 0.0, 0.0] # (m)
+    rotation_body_to_sensor_frame: [0.0, 0.0, 0.0] # RPY Euler angles in ZYX convention (deg)
+
+  model_enable_settings:
+    enable_pvt: true # Enable PVT measurements
+    enable_att: true # Enable GNSS compass measurements
+    enable_pitch: true # Enable GNSS compass pitch measurements (roll if false)
