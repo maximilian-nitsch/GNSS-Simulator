@@ -1,11 +1,5 @@
 # C++/ROS 2 Simple GNSS-Simulator
 
-[![License](https://img.shields.io/badge/license-BSD--3-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
-[![Build Status](https://gitlab.informatik.uni-bremen.de/%{project_path}/badges/%{default_branch}/pipeline.svg)](https://gitlab.informatik.uni-bremen.de/triple/gnc/sensors/gnss-simulator/-/commits/main)
-[![Coverage](https://gitlab.com/your-username/project-name/badges/master/coverage.svg)](https://gitlab.com/your-username/project-name/pipelines)
-
-<!--- ![](./data/icon.png){width=25%} -->
-
 <!--- protected region package header begins -->
 **Author:**
 - Maximilian Nitsch <m.nitsch@irt.rwth-aachen.de>
@@ -22,9 +16,9 @@ This project provides a simple GNSS simulator written in C++.
 The simulator implements the following features:
 - PVT measurement generation with lever-arm effect and white noise
 - Attitude measurement (GNSS compass) with lever-arm effect generation with white noise
-- All parameters for a GNSS reveiver can be configured in a YAML file
+- All parameters for a GNSS receiver can be configured in a YAML file
 
-Example config for a Septentrio Mosaic-H GNSS receiver is provided.
+An example config for a Septentrio Mosaic-H GNSS receiver is provided.
 
 ## Table of Contents
 
@@ -83,7 +77,7 @@ To install the `gnss_simulator_package`, you need to follow these steps:
     sudo apt-get install libeigen3-dev
     ```
 
-2. **Install ROS 2 Humble**: Make sure you have ROS 2 (Humble) installed. You can follow the official installation instructions provided by ROS 2. Visit [ROS 2 Humble Installation page](https://docs.ros.org/en/humble/Installation.html) for detailed installation instructions tailored to your platform.
+2. **Install ROS 2 Humble**: Ensure you have ROS 2 (Humble) installed. You can follow the official installation instructions provided by ROS 2. Visit [ROS 2 Humble Installation page](https://docs.ros.org/en/humble/Installation.html) for detailed installation instructions tailored to your platform.
 
 3. **Clone the Package**: Clone the package repository to your ROS 2 workspace. If you don't have a ROS 2 workspace yet, you can create one using the following commands:
 
@@ -100,7 +94,7 @@ To install the `gnss_simulator_package`, you need to follow these steps:
 
     Replace `<repository_url>` with the URL of your package repository.
 
-4. **Build the Package**: Once the package is cloned, you need to build it using colcon, the default build system for ROS 2. Navigate to your ROS 2 workspace and run the following command:
+4. **Build the Package**: Once the package is cloned, you must build it using colcon, the default build system for ROS 2. Navigate to your ROS 2 workspace and run the following command:
 
     ```bash
     cd /path/to/ros2_workspace
@@ -117,7 +111,7 @@ To install the `gnss_simulator_package`, you need to follow these steps:
 
     Replace `/path/to/ros2_workspace` with the actual path to your ROS 2 workspace.
 
-That's it! Your `gnss_simulator_package` should now be installed along with its dependencies, and ready to use in your ROS 2 environment.
+That's it! Your `gnss_simulator_package` should now be installed along with its dependencies and ready to use in your ROS 2 environment.
 
 ## Usage
 
@@ -127,15 +121,15 @@ That's it! Your `gnss_simulator_package` should now be installed along with its 
     ```bash
     ros2 launch gnss_simulator_package gnss_simulator.launch.py
     ```
-  The GNSS simulator prints your settings and now waits for a ground truth odometry message.
+  The GNSS simulator prints your settings and waits for a ground truth odometry message.
 
 3. **Provide an odometry publisher** from you vehicle simulation.
 
 4. **Check ROS 2 topics** The GNSS measurements should now be published.
 
 **Important Usage Information**:
-- The odometry message needs to be published with at least the GNSS PVT and attitude sample times.
-- The messages `/gnss_pvt/diagnostic_array` and `/gnss_attitude/diagnostic_array` will show `WARN` if odometry rate is lower.
+- The odometry message must be published with at least the GNSS PVT and attitude sample times.
+- The messages `/gnss_pvt/diagnostic_array` and `/gnss_attitude/diagnostic_array` will show `WARN` if the odometry rate is lower.
 - If no odometry message is published, the messages `/gnss_pvt/diagnostic_array` and `/gnss_attitude/diagnostic_array` will show `STALE`.
 - If everything is correct `/gnss_pvt/diagnostic_array` and `/gnss_attitude/diagnostic_array` will show `OK`. 
 
@@ -145,30 +139,10 @@ This project follows these coding guidelines:
 - https://google.github.io/styleguide/cppguide.html
 - http://docs.ros.org/en/humble/The-ROS2-Project/Contributing/Code-Style-Language-Versions.html 
 
-## Reports
-
-Coverage Report:
-- https://triple.glpages.informatik.uni-bremen.de/gnc/sensors/gnss-simulator/fancy_html_coverage_report/
-
-Dokumentation: (Doxygen Awesome)
-- https://triple.glpages.informatik.uni-bremen.de/gnc/sensors/gnss-simulator/doxygen_awesome/html/
-
-Documentation Coverage:
-- https://triple.glpages.informatik.uni-bremen.de/gnc/sensors/gnss-simulator/doxygen_awesome/doc-coverage/
-
-Code Climate Report:
-- https://triple.glpages.informatik.uni-bremen.de/gnc/sensors/gnss-simulator/gl-code-quality-report.html
-
-
-## Legacy
-
-Documentation (Doxygen Rosdoc Lite)
-- https://triple.glpages.informatik.uni-bremen.de/gnc/sensors/gnss-simulator/rosdoc_lite/html/
-
 ## Contributing
 
-If you would like to contribute to the project, see the [CONTRIBUTING](CONTRIBUTING) file for details.
+You can see the [CONTRIBUTING](CONTRIBUTING) file for details if you'd like to contribute to the project.
 
 ## License
 
-This project is licensed under the BSD-3-Clause License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the BSD-3-Clause License. Please look at the [LICENSE](LICENSE) file for details.
