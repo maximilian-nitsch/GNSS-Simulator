@@ -1,4 +1,11 @@
 # C++/ROS 2 Simple GNSS-Simulator
+![Build](https://github.com/maximilian-nitsch/GNSS-Simulator/actions/workflows/ci.yaml/badge.svg)<!-- -->
+![License](https://img.shields.io/github/license/maximilian-nitsch/GNSS-Simulator.svg)<!-- -->
+[![Last Commit](https://img.shields.io/github/last-commit/maximilian-nitsch/GNSS-Simulator)](https://github.com/maximilian-nitsch/GNSS-Simulator/commits/main)<!-- -->
+[![ROS2 Humble](https://img.shields.io/badge/ROS2-Humble-blue)](https://index.ros.org/doc/ros2/Installation/Humble/)<!-- -->
+[![Release](https://img.shields.io/github/v/release/maximilian-nitsch/GNSS-Simulator)](https://github.com/maximilian-nitsch/GNSS-Simulator/releases)<!-- -->
+[![Open Issues](https://img.shields.io/github/issues/maximilian-nitsch/GNSS-Simulator)](https://github.com/maximilian-nitsch/GNSS-Simulator/issues)<!-- -->
+[![Contributors](https://img.shields.io/github/contributors/maximilian-nitsch/GNSS-Simulator)](https://github.com/maximilian-nitsch/GNSS-Simulator/graphs/contributors)
 
 <!--- protected region package header begins -->
 **Author:**
