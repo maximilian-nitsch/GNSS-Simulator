@@ -38,7 +38,7 @@ set(HEADER_FILES
         include/gnss_simulator_package/gnss_simulator.hpp)
 
 add_library(gnss_simulator SHARED
-        src/gnss_simulator.cpp        
+        src/gnss_simulator.cpp
         ${HEADER_FILES})
 
 # add gnss_simulator_node
@@ -49,9 +49,9 @@ ament_target_dependencies(${PROJECT_NAME}_node PUBLIC
         std_msgs
         geometry_msgs
         sensor_msgs
-        nav_msgs        
+        nav_msgs
         tf2_ros
-        Eigen3        
+        Eigen3
         nanoauv_sensor_driver_interfaces)
 
 target_link_libraries(${PROJECT_NAME}_node PUBLIC gnss_simulator navigation_utilities_package::navigation_utilities_package)
@@ -112,6 +112,7 @@ if(BUILD_TESTING)
     ament_cmake_uncrustify)
 
   # enforce linters and static code analyzers defined in ament_lint_common package
+  set(ament_cmake_cppcheck_LANGUAGE c++)
   ament_lint_auto_find_test_dependencies()
 
   # uncomment to include uncrustify explicitly
