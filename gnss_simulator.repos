@@ -3,3 +3,7 @@ repositories:
     type: git
     url: https://github.com/maximilian-nitsch/Navigation-Interfaces
     version: main
+  navigation_utilities:
+    type: git
+    url: https://github.com/maximilian-nitsch/Navigation-Utilities
+    version: main
